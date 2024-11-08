@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Call App</title>
+    <style>
+        video { width: 45%; margin: 10px; border: 1px solid black; }
+        #video-container { display: flex; justify-content: center; }
+        #startButton { display: block; margin: 20px auto; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Video Call App!</h1>
+    <button id="startButton">Start Call</button>
+    <div id="video-container">
+        <video id="localVideo" autoplay muted></video>
+        <video id="remoteVideo" autoplay></video>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
