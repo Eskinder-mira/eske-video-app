@@ -4,8 +4,12 @@ let localStream;
 let peerConnection;
 
 const configuration = {
-    iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
+    iceServers: [
+        { urls: 'stun:stun.l.google.com:19302' },
+        { urls: 'turn:your-turn-server.com', username: 'user', credential: 'pass' }
+    ]
 };
+
 console.log("Start button clicked");  // Place at the start of startButton.onclick function
 
 const localVideo = document.getElementById('localVideo');
@@ -94,13 +98,4 @@ socket.on('ice-candidate', (candidate) => {
     console.log("Received ICE candidate");
     peerConnection.addIceCandidate(new RTCIceCandidate(candidate));
 });
-const configuration = {
-    iceServers: [
-        { urls: 'stun:stun.l.google.com:19302' },  // STUN server for general connection
-        { 
-            urls: 'turn:your-turn-server.com',      // Replace with actual TURN server URL
-            username: 'user',                       // Replace with your TURN server username
-            credential: 'pass'                      // Replace with your TURN server password
-        }
-    ]
-};
+
