@@ -1,25 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Call App</title>
-    <style>
-        video { width: 45%; margin: 10px; border: 1px solid black; }
-        #video-container { display: flex; justify-content: center; }
-        #startButton { display: block; margin: 20px auto; padding: 10px 20px; }
-    </style>
+    <title>WebRTC Video Call</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script> <!-- Include Socket.io client -->
 </head>
 <body>
-    <h1>Welcome to the Video Call App!</h1>
-    <button id="startButton">Start Call</button>
-    <div id="video-container">
-        <video id="localVideo" autoplay muted></video>
-        <video id="remoteVideo" autoplay></video>
-    </div>
+    <h1>WebRTC Video Call</h1>
 
+    <!-- Local video display -->
+    <video id="localVideo" autoplay muted style="width: 45%;"></video>
+
+    <!-- Remote video display -->
+    <video id="remoteVideo" autoplay style="width: 45%;"></video>
+
+    <!-- Start Call Button -->
+    <button id="startButton">Start Call</button>
+
+    <script src="public/script.js"></script> <!-- Include the client-side JavaScript -->
     <script src="/socket.io/socket.io.js"></script>
-    <script src="script.js"></script>
+<script src="/script.js"></script>
+
 </body>
 </html>

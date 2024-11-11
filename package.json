@@ -1,7 +1,6 @@
 {
   "name": "video-call-app",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,5 +12,14 @@
   "dependencies": {
     "express": "^4.21.1",
     "socket.io": "^4.8.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eskinder-mira/eske-video-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Eskinder-mira/eske-video-app/issues"
+  },
+  "homepage": "https://github.com/Eskinder-mira/eske-video-app#readme",
+  "description": ""
 }
